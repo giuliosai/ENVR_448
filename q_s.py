@@ -15,22 +15,6 @@ def q_s(N, q, param): # WHERE TO ADD q_in as another variable
          return q_s == q
      elif (N >= param.N_MAX).any():
          return q_s == min(q, param.Q_IN) # where to change Q_IN
-
-# =============================================================================
-# def q_s(N, q, param):
-#     np.piecewise([N,q,param],[N <= 0, N > 0, N >= param.N_MAX], 
-#                    [lambda N, q, param : max(q, param.MAX_Q_IN), q, 
-#                     lambda N, q, param : min(q, param.MIN_Q_IN)])
-#     
-# =============================================================================
-# =============================================================================
-# def q_s(N, q, param):
-#     np.select([N <= 0, N > 0, N >= param.N_MAX], 
-#                    [lambda N, q, param : max(q, param.MAX_Q_IN), q, 
-#                     lambda N, q, param : min(q, param.MIN_Q_IN)])
-# 
-# =============================================================================
-
 # In[ ]:
 
 
